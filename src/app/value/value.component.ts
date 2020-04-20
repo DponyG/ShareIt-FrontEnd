@@ -15,11 +15,11 @@ export class ValueComponent implements OnInit {
   }
 
   getValues(){
-    this.http.get('http://localhost:8080/shareit/api/account/').subscribe(response => {
+    this.http.get('http://localhost:8080/shareit/api/account/1').subscribe(response => {
       this.values = response;
       console.log("here");
     }, error =>{
-      console.log(error);
+      console.log("there was an error");
     });
   }
 }
